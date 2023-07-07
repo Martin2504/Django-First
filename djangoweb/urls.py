@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),    # The default path Django provides.
-    path('hello/', include("hello.urls"))
+    path('admin/', admin.site.urls),            # The default path Django provides.
+    path('hello/', include("hello.urls")),      # /hello will go to my hello app.
+    path('newyear/', include("newyear.urls"))   # /hello will go to my newyear app.
 ]
