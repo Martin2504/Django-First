@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Tasks</title>
-    </head>
-    <body>
-        <ul>
-            {% for task in tasks %}
-                <!-- plug in the task -->
-                <li>{{ task }}</li> 
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+<!-- Inherit from the Layout template. -->
+{% extends "tasks/layout.html" %}   
+
+{% block body %}
+    <h1>Tasks</h1>
+    <ul>
+        <!-- plug in the tasks -->
+        {% for task in tasks %}
+            <li>{{ task }}</li> 
+        {% endfor %}
+    </ul>
+{% endblock %}
